@@ -1,0 +1,23 @@
+name: Automatic Pull Request 
+on:
+  push:
+    branches:
+      - "feature"
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Set up GitHub CLI
+        uses: actions/setup-gh@v3
+        with:
+          gh-version: '1.14.0'
+    
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Create Pull Request
+        run: gh pr create -B main -H "feature" --title 'Merge feature branch into main' --body 'Keeping main updated with feature after pushing.'
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
