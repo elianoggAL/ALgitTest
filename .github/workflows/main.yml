@@ -6,7 +6,7 @@ on:
 
 jobs:
   create-pull-request:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     
     steps:
       - name: Set up GitHub CLI
