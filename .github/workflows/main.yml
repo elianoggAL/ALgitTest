@@ -9,11 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Set up GitHub CLI
-        uses: actions/setup-gh@v3
-        with:
-          gh-version: '1.14.0'
-    
       - name: Check out code
         uses: actions/checkout@v2
 
