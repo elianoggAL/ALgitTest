@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    
+      - name: Check out code
+        uses: actions/checkout@v2
 
       - name: Create Pull Request
         run: gh pr create -B main -H "feature" --title 'Merge feature branch into main' --body 'Keeping main updated with feature after pushing.'
