@@ -1,4 +1,6 @@
 import snowflake.connector
+import pandas as pd
+
 
 conn = snowflake.connector.connect(
     user="egonzalez@arrivelogistics.com",
