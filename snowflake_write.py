@@ -3,8 +3,8 @@ from snowflake.connector.pandas_tools import write_pandas
 import pandas as pd
 
 conn = snowflake.connector.connect(
-    #user = "egonzalez@arrivelogistics.com",
-    user="bgarvin@arrivelogistics.com",
+    user = "egonzalez@arrivelogistics.com",
+    #user="bgarvin@arrivelogistics.com",
     authenticator='externalbrowser',
     account="arrive.east-us-2.azure",
     warehouse="DATA_READER_WH",
@@ -13,8 +13,8 @@ conn = snowflake.connector.connect(
     )
 
 con_interns = snowflake.connector.connect(
-    #user = "egonzalez@arrivelogistics.com",
-    user="bgarvin@arrivelogistics.com",
+    user = "egonzalez@arrivelogistics.com",
+    #user="bgarvin@arrivelogistics.com",
     authenticator='externalbrowser',
     account="arrive.east-us-2.azure",
     role="DE_INTERNS",
